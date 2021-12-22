@@ -10,7 +10,7 @@ function Navbar() {
 
 	// Setting active/inactive link colors
 	const pathMatchRoute = (route) => {
-		if (route == location.pathname) {
+		if (route === location.pathname) {
 			return 'primary'; // active link
 		} else {
 			return 'white'; // inactive link
