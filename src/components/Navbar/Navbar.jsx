@@ -3,6 +3,7 @@ import { Footer, Nav, Links, Link } from './Navbar.style';
 import { AiFillCompass } from 'react-icons/ai';
 import { MdLocalOffer } from 'react-icons/md';
 import { ImUser } from 'react-icons/im';
+import { RiHeart3Fill } from 'react-icons/ri';
 
 function Navbar() {
 	const navigate = useNavigate();
@@ -17,28 +18,43 @@ function Navbar() {
 		}
 	};
 
+	// Navigation links
+	const links = [
+		{
+			title: 'explore',
+			path: '/',
+			icon: <AiFillCompass />,
+		},
+		{
+			title: 'offers',
+			path: '/offers',
+			icon: <MdLocalOffer />,
+		},
+		{
+			title: 'wishlist',
+			path: '/wishlist',
+			icon: <RiHeart3Fill />,
+		},
+		{
+			title: 'profile',
+			path: '/profile',
+			icon: <ImUser />,
+		},
+	];
+
 	return (
 		<Footer>
 			<Nav>
 				<Links>
-					<Link color={pathMatchRoute('/')} onClick={() => navigate('/')}>
-						<AiFillCompass />
-						<p>Explore</p>
-					</Link>
-					<Link
-						color={pathMatchRoute('/offers')}
-						onClick={() => navigate('/offers')}
-					>
-						<MdLocalOffer />
-						<p>Offers</p>
-					</Link>
-					<Link
-						color={pathMatchRoute('/profile')}
-						onClick={() => navigate('/profile')}
-					>
-						<ImUser />
-						<p>Profile</p>
-					</Link>
+					{links.map((item) => (
+						<Link
+							color={pathMatchRoute(`${item.path}`)}
+							onClick={() => navigate(`${item.path}`)}
+						>
+							{item.icon}
+							<p>{item.title}</p>
+						</Link>
+					))}
 				</Links>
 			</Nav>
 		</Footer>

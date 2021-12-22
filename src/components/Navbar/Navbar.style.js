@@ -27,7 +27,7 @@ export const Link = styled.li`
 	flex-direction: column;
 	align-items: center;
 	cursor: pointer;
-	transition: color 1.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+	transition: color 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 	color: ${(props) => props.theme.colors[props.color]};
 	p {
 		font-size: 0.5rem;
