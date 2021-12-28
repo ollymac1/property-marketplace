@@ -7,7 +7,7 @@ export const NavStyles = styled.nav`
 	align-items: center;
 
 	@media only screen and (min-width: 1100px) {
-		width: 400px;
+		width: 300px;
 	}
 `;
 
@@ -30,12 +30,11 @@ export const Link = styled.li`
 	p {
 		font-size: 0.5rem;
 		text-transform: uppercase;
-		margin-top: 10px;
-		letter-spacing: 1px;
+		margin-top: 5px;
 	}
 
 	svg {
-		transform: scale(1.4);
+		font-size: 1.2rem;
 	}
 
 	&:hover {
@@ -47,19 +46,19 @@ export const Link = styled.li`
 	}
 
 	@media only screen and (min-width: 1100px) {
-		flex-direction: row;
+		//flex-direction: row;
 		align-items: center;
 		justify-content: center;
 		margin-left: 20px;
 
 		svg {
-			display: none;
+			font-size: 1rem;
 		}
 
 		p {
-			font-size: 0.7rem;
-			margin-top: 1px;
-			margin-left: 2px;
+			font-size: 0.6rem;
+
+			text-transform: capitalize;
 		}
 
 		&:hover {

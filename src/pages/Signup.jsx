@@ -1,9 +1,5 @@
 function SignUp() {
-	return (
-		<Container>
-			<SignupForm />
-		</Container>
-	);
+	return <></>;
 }
 
 export default SignUp;

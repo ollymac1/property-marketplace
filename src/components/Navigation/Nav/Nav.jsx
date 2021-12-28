@@ -34,7 +34,7 @@ function Nav() {
 			if (screenSize.dynamicWidth < 1100) {
 				return 'secondary'; // active link
 			} else {
-				return 'primary'; // active link
+				return 'primarySubtle'; // active link
 			}
 		} else {
 			if (screenSize.dynamicWidth < 1100) {

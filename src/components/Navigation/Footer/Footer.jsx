@@ -1,11 +1,17 @@
-import { FooterStyles } from './Footer.style';
+import { FooterStyles, SocketStyles } from './Footer.style';
 import Nav from '../Nav/Nav';
+import Socket from '../Socket/Socket';
 
 function Footer() {
 	return (
-		<FooterStyles>
-			<Nav />
-		</FooterStyles>
+		<>
+			<FooterStyles>
+				<Nav />
+			</FooterStyles>
+			<SocketStyles>
+				<Socket />
+			</SocketStyles>
+		</>
 	);
 }
 
