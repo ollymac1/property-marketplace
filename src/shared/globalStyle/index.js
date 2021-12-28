@@ -12,6 +12,7 @@ body{
 	background: ${({ theme }) => theme.colors.body};
 	font-family: ${({ theme }) => theme.fonts.body};
 	letter-spacing: 1px;
+	color:  ${({ theme }) => theme.colors.secondary}
 	
 }
 
@@ -19,6 +20,11 @@ body{
 
 h1, h2, h3, h4, h5, h6{
 	font-family: ${({ theme }) => theme.fonts.heading};
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
 }
 
 

@@ -22,7 +22,7 @@ function Search() {
 					onFocus={handleSearchActive}
 					onBlur={handleSearchActive}
 					type='search'
-					placeholder='Search for a property'
+					placeholder='Search area e.g. Oxford or W5 1HH'
 					value={input}
 					onChange={handleOnChange}
 				/>

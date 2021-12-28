@@ -41,6 +41,7 @@ export const LogoContainer = styled.div`
 		letter-spacing: 2px;
 		font-size: 1rem;
 		margin-left: 5px;
+		font-family: ${({ theme }) => theme.fonts.logo};
 		font-weight: 300;
 	}
 

@@ -1,8 +1,11 @@
+import SignInForm from '../components/Auth/SignInForm/SignInForm';
+import MainContainer from '../components/Shared/MainContainer/MainContainer';
+
 function SignIn() {
 	return (
-		<div>
-			<h1>SignIn Page</h1>
-		</div>
+		<MainContainer>
+			<SignInForm />
+		</MainContainer>
 	);
 }
 

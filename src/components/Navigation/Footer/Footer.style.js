@@ -16,8 +16,8 @@ export const FooterStyles = styled.footer`
 `;
 
 export const SocketStyles = styled.footer`
-	position: fixed;
-	bottom: 0;
+	/* position: fixed;
+	bottom: 0; */
 	background: ${({ theme }) => theme.colors.lightGrey};
 	width: 100%;
 	padding: 10px 20px;
