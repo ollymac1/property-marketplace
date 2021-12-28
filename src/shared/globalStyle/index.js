@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -10,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 body{
-	font-family: 'Manrope', sans-serif;
+	font-family: 'Syncopate', sans-serif;
 	background: ${({ theme }) => theme.colors.body};
 }
 

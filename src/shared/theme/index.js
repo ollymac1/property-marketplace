@@ -4,7 +4,10 @@ export const theme = {
 		primary30: '#968503',
 		secondary: '#181A2C',
 		secondary30: '#343963',
-		body: '#F2F2F2',
+		secondary50: '#5962a8',
+		body: '#FDFDFD	',
 		white: '#fff',
 	},
+
+	breakPoint: '768px',
 };
