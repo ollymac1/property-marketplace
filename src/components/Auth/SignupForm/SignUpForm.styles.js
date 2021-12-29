@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SignInFormStyles = styled.div`
+export const SignUpFormStyles = styled.div`
 	max-width: 25rem;
 	margin-left: auto;
 	margin-right: auto;
@@ -57,7 +57,7 @@ export const EmailForm = styled.form`
 	}
 `;
 
-export const EmailInput = styled.div`
+export const TextInput = styled.div`
 	border: 0.5px solid ${({ theme }) => theme.colors.grey};
 	border-radius: 5px;
 	margin-bottom: 10px;
@@ -77,7 +77,7 @@ export const PasswordInput = styled.div`
 	margin-bottom: 20px;
 `;
 
-export const SignInButton = styled.button`
+export const SignUpButton = styled.button`
 	margin-top: 30px;
 	width: 100%;
 	padding: 10px;

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import InlineLogo from '../../Shared/InlineLogo/InlineLogo';
 import SocialButton from '../../Shared/SocialButton/SocialButton';
 import {
@@ -14,7 +15,7 @@ import {
 } from './SignInForm.styles';
 import google from '../../../assets/img/logos/google-logo.png';
 import facebook from '../../../assets/img/logos/facebook-logo.png';
-import { BsEye, BsFolderPlus } from 'react-icons/bs';
+import { BsEye } from 'react-icons/bs';
 import { AiOutlineEyeInvisible } from 'react-icons/ai';
 
 function SignInForm() {
@@ -24,15 +25,34 @@ function SignInForm() {
 		password: '',
 	});
 
-	const { email, password } = formData;
-
 	const navigate = useNavigate();
+
+	const { email, password } = formData;
 
 	const onChange = (e) => {
 		setFormData((prevState) => ({
 			...prevState,
 			[e.target.id]: e.target.value,
 		}));
+	};
+
+	const onSubmit = async (e) => {
+		e.preventDefault();
+
+		try {
+			const auth = getAuth();
+			const userCredentials = await signInWithEmailAndPassword(
+				auth,
+				email,
+				password
+			);
+
+			if (userCredentials.user) {
+				navigate('/profile');
+			}
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	return (
@@ -62,7 +82,7 @@ function SignInForm() {
 
 			{/* Email Form */}
 
-			<EmailForm>
+			<EmailForm onSubmit={onSubmit}>
 				<EmailInput>
 					<input
 						type='email'
