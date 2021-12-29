@@ -1,8 +1,11 @@
+import PasswordResetForm from '../components/Auth/PasswordResetForm/PasswordResetFrom';
+import MainContainer from '../components/Shared/MainContainer/MainContainer';
+
 function ForgotPassword() {
 	return (
-		<div>
-			<h1>ForgotPassword Page</h1>
-		</div>
+		<MainContainer>
+			<PasswordResetForm />
+		</MainContainer>
 	);
 }
 

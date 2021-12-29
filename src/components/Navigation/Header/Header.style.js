@@ -4,7 +4,8 @@ export const HeaderStyles = styled.header`
 	height: 60px;
 	background: ${({ theme }) => theme.colors.secondary};
 	padding: 0 20px;
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 	justify-content: space-between;
 	align-items: center;
 
@@ -26,7 +27,7 @@ export const SearchContainer = styled.div`
 
 export const LogoContainer = styled.div`
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	cursor: pointer;
 	height: 100%;
@@ -47,6 +48,7 @@ export const LogoContainer = styled.div`
 
 	svg {
 		width: 20px;
+		height: 100%;
 	}
 `;
 

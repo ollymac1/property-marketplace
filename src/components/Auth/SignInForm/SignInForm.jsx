@@ -112,7 +112,7 @@ function SignInForm() {
 					)}
 				</PasswordInput>
 				<p>
-					<Link to='/sign-up'>
+					<Link to='/forgot	-password'>
 						<span>Forgotten Password</span>
 					</Link>
 				</p>

@@ -31,12 +31,12 @@ export const links = [
 export const secondaryLinks = [
 	{
 		title: 'For sale',
-		path: '/',
+		path: '/category/buy',
 	},
 
 	{
 		title: 'To rent',
-		path: '/',
+		path: '/category/rent',
 	},
 
 	{

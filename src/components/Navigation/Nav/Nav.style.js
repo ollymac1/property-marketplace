@@ -5,10 +5,6 @@ export const NavStyles = styled.nav`
 	width: 100%;
 	justify-content: space-around;
 	align-items: center;
-
-	@media only screen and (min-width: 1100px) {
-		width: 300px;
-	}
 `;
 
 export const Links = styled.ul`
@@ -17,6 +13,10 @@ export const Links = styled.ul`
 	flex-direction: row;
 	justify-content: space-around;
 	width: 100%;
+
+	@media only screen and (min-width: 1100px) {
+		justify-content: flex-end;
+	}
 `;
 
 export const Link = styled.li`

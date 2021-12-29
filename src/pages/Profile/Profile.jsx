@@ -9,8 +9,9 @@ import {
 	ProfileDetails,
 	ProfileDetailsHeader,
 	ProfileDetailsForm,
+	ButtonGroup,
 } from './Profile.styles';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 function Profile() {
@@ -78,30 +79,32 @@ function Profile() {
 			<ProfileDetails>
 				<ProfileDetailsHeader>
 					<p>Personal Details</p>
-					{changeDetails && (
+					<ButtonGroup>
+						{changeDetails && (
+							<button
+								type='button'
+								onClick={() => {
+									setChangeDetails((prevState) => !prevState);
+									setformData({
+										name: auth.currentUser.displayName,
+										email: auth.currentUser.email,
+									});
+								}}
+							>
+								Cancel Changes
+							</button>
+						)}
+
 						<button
 							type='button'
 							onClick={() => {
+								changeDetails && onSubmit();
 								setChangeDetails((prevState) => !prevState);
-								setformData({
-									name: auth.currentUser.displayName,
-									email: auth.currentUser.email,
-								});
 							}}
 						>
-							Cancel Changes
+							{changeDetails ? 'Submit Changes' : 'Change'}
 						</button>
-					)}
-
-					<button
-						type='button'
-						onClick={() => {
-							changeDetails && onSubmit();
-							setChangeDetails((prevState) => !prevState);
-						}}
-					>
-						{changeDetails ? 'Submit Changes' : 'Change'}
-					</button>
+					</ButtonGroup>
 				</ProfileDetailsHeader>
 				<ProfileDetailsForm>
 					<input

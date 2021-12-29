@@ -36,19 +36,6 @@ export const ProfileDetailsHeader = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 10px;
-
-	button {
-		background: none;
-		border: none;
-		font-weight: 500;
-		color: ${({ theme }) => theme.colors.primary30};
-		padding-bottom: 2px;
-		cursor: pointer;
-
-		&:hover {
-			border-bottom: 1px solid ${({ theme }) => theme.colors.primary30};
-		}
-	}
 `;
 
 export const ProfileDetailsForm = styled.form`
@@ -62,6 +49,36 @@ export const ProfileDetailsForm = styled.form`
 
 		&:focus {
 			outline: none;
+		}
+	}
+`;
+
+export const ButtonGroup = styled.div`
+	display: flex;
+	gap: 5px;
+	color: white;
+
+	&:first-child {
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+
+	&:last-child {
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+	button {
+		background: transparent;
+		border: none;
+		border-radius: 5px;
+		background: ${({ theme }) => theme.colors.secondary30};
+		cursor: pointer;
+		padding: 5px 10px;
+		color: ${({ theme }) => theme.colors.white};
+
+		&:hover {
+			background: ${({ theme }) => theme.colors.secondary};
 		}
 	}
 `;
