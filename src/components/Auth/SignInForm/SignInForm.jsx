@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 import { Link, useNavigate } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import InlineLogo from '../../Shared/InlineLogo/InlineLogo';
@@ -51,7 +52,7 @@ function SignInForm() {
 				navigate('/profile');
 			}
 		} catch (error) {
-			console.log(error);
+			toast.error('Invalid login details');
 		}
 	};
 
