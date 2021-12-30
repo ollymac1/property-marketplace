@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+
 import { doc, getDoc } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 import { db } from '../config/firebase.config';
-import { toast } from 'react-toastify';
 
 import Spinner from '../components/Shared/Spinner/Spinner';
 import MainContainer from '../components/Shared/MainContainer/MainContainer';
@@ -15,7 +14,6 @@ function Wishlist() {
 	const [loading, setLoading] = useState(true);
 
 	const auth = getAuth();
-	const params = useParams();
 
 	useEffect(() => {
 		const getWishlist = async () => {
@@ -49,7 +47,7 @@ function Wishlist() {
 		};
 
 		getWishlist();
-	}, []);
+	}, [auth.currentUser.uid]);
 
 	return (
 		<MainContainer>
