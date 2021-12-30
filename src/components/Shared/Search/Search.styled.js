@@ -33,14 +33,15 @@ export const InputGroup = styled.div`
 		transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 		width: 100%;
 		height: 100%;
+		padding: 5px;
 
 		svg {
 			font-size: 1.2rem;
 		}
 
 		&:hover {
-			color: ${({ theme }) => theme.colors.primary};
-			background-color: ${({ theme }) => theme.colors.secondary50};
+			color: ${({ theme }) => theme.colors.secondary50};
+			background-color: ${({ theme }) => theme.colors.primary50};
 		}
 	}
 `;
@@ -55,4 +56,5 @@ export const Overlay = styled.div`
 	width: 100vw;
 	display: ${(props) => props.display};
 	transition: all 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+	z-index: 99;
 `;

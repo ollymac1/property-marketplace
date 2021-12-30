@@ -7,8 +7,6 @@ export const MainContainerStyled = styled.main`
 	margin: auto;
 
 	@media only screen and (max-width: 1100px) {
-		padding-left: 5px;
-		padding-right: 5px;
-		padding-bottom: 50px;
+		padding: 25px 5px 50px 5px;
 	}
 `;

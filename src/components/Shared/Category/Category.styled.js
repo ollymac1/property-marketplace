@@ -18,8 +18,9 @@ export const CategoryStyled = styled.div`
 		background: ${({ theme }) => theme.colors.secondary};
 		color: ${({ theme }) => theme.colors.white};
 		padding: 10px;
-		margin-top: -45px;
+		margin-top: -43px;
 		opacity: 0.8;
+		font-size: 0.9rem;
 	}
 
 	&:hover {

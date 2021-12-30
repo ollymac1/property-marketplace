@@ -16,12 +16,15 @@ import {
 	SummaryInformation,
 	Header,
 	Chips,
+	Wishlist,
 } from './PropertyListing.styles';
 import Chip from '../Chip/Chip';
-import { AiOutlineHeart, AiOutlineCar } from 'react-icons/ai';
+import { AiOutlineCar } from 'react-icons/ai';
 import { MdBed, MdOutlineSquareFoot } from 'react-icons/md';
 import { BiBath } from 'react-icons/bi';
 import { BsHouseDoor } from 'react-icons/bs';
+
+import AddToWishlist from '../AddToWishlist/AddToWishlist';
 
 function PropertyListing({ listing, id, onDelete }) {
 	//Calculated % discount if a discounted price exisits
@@ -46,8 +49,8 @@ function PropertyListing({ listing, id, onDelete }) {
 	}
 
 	return (
-		<Link to={`category/${listing.listingType}/${id}`}>
-			<StyledPropertyListing>
+		<StyledPropertyListing>
+			<Link to={`category/${listing.listingType}/${id}`}>
 				<DetailsContainer>
 					<img src={listing.imgUrls[0]} alt={listing.name} />
 					<ListingSummary>
@@ -117,17 +120,15 @@ function PropertyListing({ listing, id, onDelete }) {
 						</SummaryIcons>
 					</ListingSummary>
 				</DetailsContainer>
-				<CTAFooter>
-					<p>
-						Listed on{' '}
-						{dayjs(listing.timestamp.toDate()).format(' ddd DD MMM YYYY')}
-					</p>
-					<div>
-						<AiOutlineHeart />
-					</div>
-				</CTAFooter>
-			</StyledPropertyListing>
-		</Link>
+			</Link>
+			<CTAFooter>
+				<p>
+					Listed on{' '}
+					{dayjs(listing.timestamp.toDate()).format(' ddd DD MMM YYYY')}
+				</p>
+				<AddToWishlist id={id} />
+			</CTAFooter>
+		</StyledPropertyListing>
 	);
 }
 

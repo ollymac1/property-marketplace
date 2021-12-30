@@ -27,5 +27,12 @@ a{
 	color: inherit;
 }
 
+button{
+	border:none;
+	border-radius:5px;
+	padding:10px;
+	
+}
+
 
 `;

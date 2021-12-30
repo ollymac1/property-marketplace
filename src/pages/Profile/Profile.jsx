@@ -10,9 +10,11 @@ import {
 	ProfileDetailsHeader,
 	ProfileDetailsForm,
 	ButtonGroup,
+	CreateListingButton,
 } from './Profile.styles';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { BsFillHouseDoorFill } from 'react-icons/bs';
 
 function Profile() {
 	const auth = getAuth();
@@ -72,6 +74,7 @@ function Profile() {
 		<MainContainer>
 			<ProfileHeader>
 				<h3>My Profile</h3>
+
 				<SignOutButton type='button' onClick={onSignOut}>
 					Sign Out
 				</SignOutButton>
@@ -122,6 +125,10 @@ function Profile() {
 						onChange={onChange}
 					></input>
 				</ProfileDetailsForm>
+				<CreateListingButton type='button'>
+					<BsFillHouseDoorFill />
+					Sell or rent your home
+				</CreateListingButton>
 			</ProfileDetails>
 		</MainContainer>
 	);

@@ -9,6 +9,7 @@ export const FooterStyles = styled.footer`
 	bottom: 0;
 	width: 100%;
 	height: 75px;
+	background: white;
 
 	@media only screen and (min-width: 1100px) {
 		display: none;
